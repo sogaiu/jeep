@@ -44,7 +44,7 @@
         (os/exit 1)))
     (flush))
 
-  (jpm/pm/import-rules "./project.janet" false)
+  (jpm/pm/import-rules "./project.janet")
   (def rules (jpm/rules/getrules))
   (def task (rules "test"))
   (put (task :recipe) 0 run-tests)

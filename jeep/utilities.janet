@@ -22,7 +22,7 @@
 
     :file
     (do
-      (def env (jpm/pm/require-jpm "./project.janet" true))
+      (def env (jpm/pm/require-jpm "./project.janet"))
       (def meta (merge (env :project) {:jeep/tree tree} {:jeep/exes @[]}))
       (def src (slurp "./project.janet"))
       (def p (parser/new))
